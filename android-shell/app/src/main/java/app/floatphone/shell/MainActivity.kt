@@ -380,7 +380,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         // 冷启动带深链（如来电接听）直接加载目标；否则加载首页
-        webView.loadUrl(consumeOpenUrl(intent) ?: SITE_URL)
+        webView.loadUrl("https://raniyworld.netlify.app/")
         ensurePushService()
     }
 
@@ -390,7 +390,7 @@ class MainActivity : AppCompatActivity() {
         setIntent(intent)
         val target = consumeOpenUrl(intent) ?: return
         // SPA 已加载：loadUrl 到同页 hash 只触发 hashchange，不会整页重载
-        webView.loadUrl(target)
+        webView.loadUrl("https://raniyworld.netlify.app/")
     }
 
     /**
